@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=3, user-scalable=1"
+    />
+    <title></title>
+    
+  <style>
+          /* DIN Pro Regular */
+          @font-face {
+            font-family: 'DIN Pro';
+            src: url('https://raw.githubusercontent.com/tsukamel/e-learning/9de0f12e195b0cd189ee8562c7fd88dbbe9b09cc/DINPro.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+          }
+
+          @font-face {
+            font-family: 'DIN Pro';
+            src: url('https://raw.githubusercontent.com/tsukamel/e-learning/9de0f12e195b0cd189ee8562c7fd88dbbe9b09cc/DINPro-Bold.woff2') format('woff2');
+            font-weight: bold;
+            font-style: normal;
+          }
+
+          /* eLearning Extlight with fallback */
+          @font-face {
+            font-family: 'OMRON e-Learning Extlight';
+            src: url('https://raw.githubusercontent.com/tsukamel/e-learning/d427e93d3c4bdcbbcedd2d5dc6fad526e0a7f9e6/eLearning-Extlight.woff2') format('woff2');
+            font-weight: 300;
+            font-style: normal;
+          }
+
+          /* eLearning Thin with fallback */
+          @font-face {
+            font-family: 'OMRON e-Learning Thin';
+            src: url('https://raw.githubusercontent.com/tsukamel/e-learning/9de0f12e195b0cd189ee8562c7fd88dbbe9b09cc/eLearning-Thin.woff2') format('woff2');
+            font-weight: 300;
+            font-style: normal;
+          }
+        
+</style>
+
+    
+    <script src="scormdriver.js" charset="utf-8"></script>
+    <script>
+      USE_LEGACY_IDENTIFIERS_FOR_2004 = true;
+      REVIEW_MODE_IS_READ_ONLY = false;
+      window.onbeforeunload = () => window.Unload();
+      const LoadContent = function () {
+        [
+          "assets/js/project.js",
+          "dist/main.chunk.js",
+          "dist/runtime-main.bundle.js",
+          "dist/vendors-main.chunk.js",
+        ].forEach((src) => {
+          script = document.createElement("script");
+          script.src = src;
+          script.charset = "utf-8";
+          script.async = false;
+          document.body.appendChild(script);
+        });
+      };
+    </script>
+  </head>
+  <body onload="Start()">
+    <div id="app" style="width: 100%; height: 100%"></div>
+    <div id="left-arrow">
+        <img src="dr/057466.svg" alt="Left Arrow" style="width: 30px; height: 30px;" /></div>
+  </body>
+</html>
